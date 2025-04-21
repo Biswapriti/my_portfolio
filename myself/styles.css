@@ -1,0 +1,293 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #08034f, #2a217d);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+*::selection {
+    background: rgba(43, 61, 218, 0.8);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background: rgba(9, 14, 30, 0.9);
+    padding: 0 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: rgba(237, 113, 239, 0.9);
+    font-size: 1.04rem;
+    text-shadow: 0 0 20px rgb(47, 13, 217);
+}
+
+/* Hamburger menu styles */
+#menu {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    display: none;
+}
+
+.left {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.right {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+main hr {
+    border: none;
+    background: #9c97f1;
+    height: 1.2px;
+    margin: 50px 84px;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    transition: transform 0.1s ease-in-out;
+}
+
+.firstSection > div {
+    width: 35%;
+}
+
+.leftSection {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.leftSection .buttons {
+    padding: 23px;
+}
+
+.leftSection .btn {
+    background-color: rgb(25, 14, 180);
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.leftSection .btn:hover {
+    background-color: rgb(15, 8, 120);
+    box-shadow: 0 0 20px rgb(2, 254, 250);
+    transform: translateY(-3px);
+}
+.rightSection img {
+    flex: 1 1 100rem;
+    z-index: 2;
+    width: 100%;
+    margin-left: 2rem;
+    border-radius: 30%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.rightSection img:hover {
+    box-shadow: 0 5px 15px rgba(1, 225, 255, 0.5);
+    animation: floatEffect 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 798px) {
+    #menu {
+        display: block;
+    }
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 70px 0;
+        margin-bottom: 100px; /* Adjust margin for smaller screens */
+        margin-top: 40px;
+        transition: transform 0.1s ease-in-out;
+    }
+
+    nav .right ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        background: rgba(14, 15, 49, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: left 0.4s ease-in-out;
+        padding: 10px 0; /* Add padding for better spacing */
+    }
+
+    nav .right ul li {
+        margin: 15px 0; /* Reduce margin for better spacing */
+    }
+
+    nav .right ul.nav-toggle {
+        left: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem; /* Reduce font size for navigation links */
+    }
+
+    .leftSection {
+        font-size: 2rem; /* Adjust section font size */
+        text-align: left; /* Center-align text for better layout */
+        padding-top: 10px; /* Add padding for better spacing */
+    }
+
+    .leftSection .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Adjust gap between buttons */
+    }
+
+    .leftSection .btn {
+        width: 90%; /* Make buttons take most of the width */
+    }
+    .rightSection img {
+        width: 100%;
+        margin-left: 0; /* Remove left margin for better layout */
+        border-radius: 20%; /* Adjust border radius for smaller screens */
+        margin-top: 0%;
+    }
+}    
+
+.purple {
+    color: rgb(82, 239, 236);
+    font-weight: bold;
+}
+
+footer {
+    background: rgb(26, 6, 106);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-rights {
+    color: gray;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.icons i {
+    color: #bbb;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    animation: floatEffect 3s infinite ease-in-out;
+}
+
+.icons i:hover {
+    color: #00ddff;
+    transform: scale(1.3) rotate(10deg);
+    text-shadow: 0 0 20px rgb(2, 254, 250);
+}
+
+@keyframes floatEffect {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(100px); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+/* Section hover effect */ 
+nav:hover, 
+footer:hover, 
+.rightSection img:hover {
+    background: linear-gradient(135deg, #2a217d, #08034f);
+    transition: background 0.5s ease-in-out;
+}
+
+/* Text color change on hover */
+.firstSection:hover .leftSection,
+footer:hover .footer{
+    color: rgb(255, 204, 0);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Button color change effect */
+.leftSection .btn:hover {
+    background-color: rgb(255, 153, 51);
+    border-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/* Add subtle glow effect on section hover */ 
+footer:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.68);
+}

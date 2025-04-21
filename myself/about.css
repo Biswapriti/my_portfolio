@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(8, 3, 79);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+*::selection {
+    background: rgba(43, 61, 218, 0.8);
+    color: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(9, 14, 30, 0.9);
+    padding: 0 50px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: rgb(236, 140, 225);
+    font-size: 1.04rem;
+}
+/* Hamburger menu styles */
+#menu {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    display: none;
+}
+
+@media (max-width: 798px) {
+    #menu {
+        display: block;
+    }
+    
+    nav .right ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        background-color: rgba(14, 15, 49, 0.7);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+    }
+    nav .right ul li {
+        margin: 20px 0;
+    }
+    nav .right ul.nav-toggle {
+        left: 0;
+    }
+}
+.left{
+    font-size: 2.0rem;
+    margin-left: 0 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.right{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align items at the top */
+    margin: 100px 0;
+    padding: 0 20px; /* Add some padding on the left and right */
+}
+
+.firstSection > div {
+    width: 100%; /* Take full width of the parent */
+    max-width: 800px; /* Limit the maximum width for better readability */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px; /* Adjusted font size for better readability */
+    line-height: 1.6; /* Add line height for better spacing between lines */
+    color: white; /* Set text color */
+    margin: 0 20px; /* Add some margin on the left and right */
+    text-align: justify; /* Justify text for a neat, aligned appearance */
+    padding: 20px; /* Add padding for inner spacing */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(23, 168, 197, 0.833); /* Subtle shadow for depth */
+}
+
+.firstSection h1 {
+    font-size: 36px; /* Set a larger font size for the name */
+    color: white; /* A deep purple color */
+    text-align: center; /* Center the name */
+    font-family: 'Arial', sans-serif; /* Clean, modern font for the name */
+    margin-bottom: 20px; /* Space between the name and the rest of the content */
+    font-weight: bold; /* Make the name stand out */
+}
+
+.firstSection .purple {
+    color: #ea9920; /* Purple color for key technologies and names */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .firstSection {
+        flex-direction: column; /* Stack the content vertically on smaller screens */
+        align-items: center; /* Center the content */
+    }
+
+    .firstSection > div {
+        max-width: 100%; /* Remove max width on smaller screens */
+        margin: 0 10px; /* Adjust margin for smaller screens */
+    }
+
+    .firstSection h1 {
+        font-size: 28px; /* Smaller font size on mobile */
+    }
+}

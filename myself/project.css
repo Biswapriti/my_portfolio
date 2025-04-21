@@ -1,0 +1,228 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(8, 3, 79);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*::selection {
+  background: rgba(43, 61, 218, 0.8);
+  color: #fff;
+}
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(9, 14, 30);
+  position: relative; /* Ensure it stays above other content */
+  z-index: 10; /* Keeps navbar on top */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: rgb(236, 140, 225);
+  font-size: 1.04rem;
+}
+
+.left {
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.right {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+}
+/* Hamburger menu styles */
+#menu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  display: none;
+  z-index: 15;
+}
+
+@media (max-width: 798px) {
+  #menu {
+      display: block;
+  }
+  
+  nav .right ul {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: -100%;
+      background-color: rgba(14, 15, 49, 0.7);
+      width: 100%;
+      text-align: center;
+      transition: left 0.3s ease-in-out;
+  }
+  nav .right ul li {
+      margin: 20px 0;
+  }
+  nav .right ul.nav-toggle {
+      left: 0;
+  }
+}
+
+/* work section starts */
+.work {
+  background: linear-gradient(to bottom, #1b0354, #430257);
+  position: relative; /* Keeps the work section within its boundaries */
+  z-index: 1;
+}
+.work h2 {
+  font-size: 40px;
+  color: #00eaff;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.work .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+  border: 4rem;
+}
+
+.work .box-container .box {
+  flex: 1 1 26rem;
+  border-radius: 3.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.742);
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work .box-container .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(40, 77, 189, 0.393);
+}
+
+.work .box-container .box img {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  z-index: 0; 
+}
+
+.work .box-container .box .content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 88%;
+  left: 0;
+  background: linear-gradient(10deg, #0f0245,rgba(34, 0, 39, 0.595));
+  display: flex;
+  flex-direction: column;
+  transition: top 0.3s ease;
+}
+
+.work .box-container .box .content .tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  background:linear-gradient(10deg, #010e44,rgb(4, 117, 247));
+}
+
+.work .box-container .box .content .tag h3 {
+  font-size: 1.5rem;
+}
+
+.work .box-container .box:hover .content {
+  top: 40%;
+}
+
+.work .desc {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work .desc p {
+  font-size: 1rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.work .desc .btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.work .desc .btns .btn {
+  line-height: 0;
+  display: inline;
+  padding: 1.2rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(2, 116, 255);
+  margin-right: 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.work .desc .btns .btn:hover {
+  background: #310ae0f5;
+  transform: translateY(-5px);
+}
+
+.work .viewall {
+  display: flex;
+  justify-content: center;
+}
+
+/* work section ends */
+@keyframes floatEffect {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
